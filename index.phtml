@@ -1,0 +1,13 @@
+<div id="kbsearchdiv" class="content rightbardiv">
+    <div id="kbsearchcontainer">
+            <input type="text" class="required" id="kbquery" name="kbquery" placeholder="Search KB" value="<?php echo $this->cache_KBSearchquery; ?>" />
+            <div id="kbsearchresults" <?php if($this->cache_KBSearchResults=="") echo "style='display:none;'" ?>><?php echo $this->cache_KBSearchResults; ?></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        clientexec.searchKB_start = <?php echo $this->cache_KBSearchstart; ?>;
+        clientexec.searchKB_query = "<?php echo $this->cache_KBSearchquery; ?>";
+    });
+</script>
